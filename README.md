@@ -8,9 +8,7 @@ by Sh.Nanosem
 
   Closures are self-contained blocks of functionality that can be passed around and used in your code.
 
-<b> How to declare a Closure in Swift? </b>
-<a href="http://fuckingclosuresyntax.com/"/> 
-
+<b> How to declare a Closure in Swift? </b> http://fuckingclosuresyntax.com/
   <div>
     <h2>As a <strong>variable</strong>:</h2>
     <code>
