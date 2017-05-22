@@ -1,6 +1,6 @@
 # swiftClosures
-Closures in swift 3
-By Sh.Nanosem
+Closures in swift 3 <br>
+by Sh.Nanosem
 
 <h3><b> Introduction </b></h3>
 
@@ -8,7 +8,8 @@ By Sh.Nanosem
 
   Closures are self-contained blocks of functionality that can be passed around and used in your code.
 
-How to declare a Closure in Swift?
+<b> How to declare a Closure in Swift? </b>
+<a href="http://fuckingclosuresyntax.com/"/> 
 
   <div>
     <h2>As a <strong>variable</strong>:</h2>
