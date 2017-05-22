@@ -8,7 +8,9 @@ by Sh.Nanosem
 
   Closures are self-contained blocks of functionality that can be passed around and used in your code.
 
-<b> How to declare a Closure in Swift? </b> http://fuckingclosuresyntax.com/
+<h2><b> How to declare a Closure in Swift? </b></h2>
+http://fuckingclosuresyntax.com/
+<div>
   <div>
     <h2>As a <strong>variable</strong>:</h2>
     <code>
@@ -106,3 +108,5 @@ by Sh.Nanosem
       <span class='name'>array</span>.<span class='func'>sorted</span>(<span class='func'>by:</span> { [unowned self] <span class='return'>in return</span> $0 &lt; $1 })
     </code>
   </div>
+</div>
+
