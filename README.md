@@ -33,7 +33,7 @@ https://pastebin.com/mwVScJDV </br>
 <h3> @noescape </h3>
 
 <code lang="swift">
-  func someFunctionWithNonescapingClosure(closure: () -> Void) {
+  func someFunctionWithNonescapingClosure(closure: @noescape () -> Void) {
     closure()
   }
 </code>
