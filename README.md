@@ -1,17 +1,22 @@
 # swiftClosures
 Closures in swift 3 </br>
 
-<h3><b> Introduction </b></h3>
+<h3><b> Introduction </b></h3></br>
+https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Closures.html
 
 <h4> What is closures in swift? </h4>
 
   Closures are self-contained blocks of functionality that can be passed around and used in your code.
-
 <h2><b> How to declare a Closure in Swift? </b></h2>
 http://fuckingclosuresyntax.com/
 
-<h1><b> Existing types of closures: </b></h1>
+<code>
+{ (parameters) -> ReturnType in
+  //Closure body goes here...
+}
+</code>
 
+<h1><b> Existing types of closures: </b></h1>
 
 <h3> @escaping </h3>
 
@@ -21,7 +26,9 @@ One way that a closure can escape is by being stored in a variable that is defin
 https://pastebin.com/FhjeYQyX
 
 <p> My example of using escaping closure: </p>
-https://pastebin.com/68rVvLFU
+https://pastebin.com/68rVvLFU </br>
+
+<b> Marking a closure with @escaping means you have to refer to self explicitly within the closure. </b>
 
 <h3> @noescape </h3>
 
@@ -30,3 +37,16 @@ https://pastebin.com/68rVvLFU
     closure()
   }
 </code>
+
+<h3><b> And now - @autoclosure</b></h3>
+
+<p>
+An autoclosure is a closure that is automatically created to wrap an expression that’s being passed as an argument to a function. It doesn’t take any arguments, and when it’s called, it returns the value of the expression that’s wrapped inside of it. This syntactic convenience lets you omit braces around a function’s parameter by writing a normal expression instead of an explicit closure.
+</p>
+
+<p>
+It’s common to call functions that take autoclosures, but it’s not common to implement that kind of function. For example, the assert(condition:message:file:line:) function takes an autoclosure for its condition and message parameters; its condition parameter is evaluated only in debug builds and its message parameter is evaluated only if condition is false.
+</p>
+
+Example:
+http://ericasadun.com/2015/04/30/swift-a-little-autoclosure-hacking/
