@@ -12,7 +12,7 @@
 }
 </code>
 
-<hr>
+##
 
 <h3> Existing types of closures: </h3>
 <h3> @escaping </h3>
@@ -69,7 +69,7 @@ And one more:
 https://pastebin.com/AEKchATh
 </p>
 
-<hr>
+##
 
 <div>
 <h3> Swift Capture List in Closures </h3>
@@ -85,7 +85,7 @@ https://pastebin.com/dVCkFEbB
 
 </div>
 
-<hr>
+##
 
 <h5> Referances: <h5>
 <p> Official documentation <br>
