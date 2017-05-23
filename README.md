@@ -86,12 +86,17 @@ https://pastebin.com/dVCkFEbB
 </div>
 </hr>
 
-<div>
-  <h5> Referances: <h5>
-  <p> Official documentation </p>
-  https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Closures.html </br>
-  <p> Declarations of closure blocs </p>
-  http://goshdarnclosuresyntax.com </br>
-  <p> Capture list (Rus) <p>
-  http://swiftbook.ru/doc/automatic-reference-counting/resolving-strong-reference-cycles-for-closures </br>
-</div>
+
+<h5> Referances: <h5>
+<p> Official documentation <br>
+https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Closures.html
+</p>
+
+<p> Declarations of closure blocs <br>
+http://goshdarnclosuresyntax.com 
+</p>
+
+<p> Capture list (Rus) <br>
+http://swiftbook.ru/doc/automatic-reference-counting/resolving-strong-reference-cycles-for-closures
+</p>
+
