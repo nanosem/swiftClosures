@@ -28,20 +28,20 @@ One way that a closure can escape is by being stored in a variable that is defin
 
 <p> My example of using escaping closure: </p>
 <code>
-class FirstClass {
-  private(set) var userName: String?
-  private func getUserName() {
-    NetworkManager.instance.getUserName() { [weak self] userName in
-      guard userName != nil else { 
-        // Error
-      }
-      self?.userName = userName
-    }
-    //NetworkManager.instance.getUserName({ [weak self] userName in
-    //  self?.userName = userName
-    //})
-  }
-}
+class FirstClass { </br>
+  private(set) var userName: String? </br>
+  private func getUserName() { </br>
+    NetworkManager.instance.getUserName() { [weak self] userName in </br>
+      guard userName != nil else { </br>
+        // Error </br>
+      } </br>
+      self?.userName = userName </br>
+    } </br>
+    //NetworkManager.instance.getUserName({ [weak self] userName in </br>
+    //  self?.userName = userName </br>
+    //}) </br>
+  } </br>
+} </br>
 
 class NetworkManager {
   static let instance = NetworkManager()
@@ -56,7 +56,7 @@ class NetworkManager {
 }
 </code>
 
-<h3> @noescape <h3>
+<h3> @noescape </h3>
 
 <code lang="swift">
   func someFunctionWithNonescapingClosure(closure: () -> Void) {
