@@ -1,7 +1,5 @@
 # swiftClosures
-<h3><b> Introduction </b></h3> 
-</br>
-
+<h3><b> Introduction </b></h3>
 <h4> What is closures in swift? </h4>
 <p> Closures are self-contained blocks of functionality that can be passed around and used in your code. </p>
 
@@ -32,13 +30,18 @@ One way that a closure can escape is by being stored in a variable that is defin
 Another example of using escaping closure: https://pastebin.com/mwVScJDV
 </p>
 
+<p>
 Marking a closure with @escaping means you have to refer to self explicitly within the closure.
+Goto: "Swift Capture List in Closures"
+
+</p>
 
 <h3> @noescape (default closure type in swift 3+)</h3>
 
 <img src="https://swiftunboxed.com/images/closure-noescape.png" width="500" height="300"> </br>
 
-<p> https://pastebin.com/JsS74P4L </br>
+<p> https://pastebin.com/JsS74P4L 
+
 The lifecycle of a non-escaping closure is simple:
 
 Pass a closure into a function
@@ -59,15 +62,25 @@ It’s common to call functions that take autoclosures, but it’s not common to
 <p>
 Simple example of usage:
 https://pastebin.com/JG4fqrnY
-</p>
 
+And one more:
+https://pastebin.com/AEKchATh
+</p>
 </hr>
+
+<div>
+<h3> Swift Capture List in Closures </h3>
+
+Simple example of using capture list:
+https://pastebin.com/2Pr5wwyE
+
+</div>
+</hr>
+
 <div>
   <h5> Referances: <h5>
   <p> Official documentation </p>
   https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Closures.html </br>
   <p> Declarations of closure blocs </p>
   http://goshdarnclosuresyntax.com </br>
-  <p> Autoclosure usage example </p>
-  http://ericasadun.com/2015/04/30/swift-a-little-autoclosure-hacking/
 </div>
