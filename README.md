@@ -14,11 +14,10 @@ http://fuckingclosuresyntax.com/
 
 
 <h3> @escaping </h3>
-Escaping closure
 
-A closure is said to escape a function when the closure is passed as an argument to the function, but is called after the     function returns. When you declare a function that takes a closure as one of its parameters, you can write <b>@escaping</b>   before   the parameter’s type to indicate that the closure is allowed to escape.
+<p> A closure is said to escape a function when the closure is passed as an argument to the function, but is called after the     function returns. When you declare a function that takes a closure as one of its parameters, you can write <b>@escaping</b>   before   the parameter’s type to indicate that the closure is allowed to escape.
 
-One way that a closure can escape is by being stored in a variable that is defined outside the function. As an example, many   functions that start an asynchronous operation take a closure argument as a completion handler. The function returns after     it starts the operation, but the closure isn’t called until the operation is completed—the closure needs to escape, to be .   called later. For example:
+One way that a closure can escape is by being stored in a variable that is defined outside the function. As an example, many   functions that start an asynchronous operation take a closure argument as a completion handler. The function returns after     it starts the operation, but the closure isn’t called until the operation is completed—the closure needs to escape, to be .   called later. For example: </p>
 
 <code lang="swift">
   var completionHandlers: [() -> Void] = []
@@ -27,13 +26,17 @@ One way that a closure can escape is by being stored in a variable that is defin
   }
 </code>
 
-My example of using escaping closure:
+<p> My example of using escaping closure: </p>
 <code lang="swift">
 class FirstClass {
   private(set) var userName: String?
   
   private func getUserName() {
     NetworkManager.instance.getUserName() { [weak self] userName in
+      guard userName != nil else { 
+        // Error
+      }
+      
       self?.userName = userName
     }
     
