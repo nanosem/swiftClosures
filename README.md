@@ -18,43 +18,11 @@ http://fuckingclosuresyntax.com/
 <p> A closure is said to escape a function when the closure is passed as an argument to the function, but is called after the     function returns. When you declare a function that takes a closure as one of its parameters, you can write <b>@escaping</b>   before   the parameter’s type to indicate that the closure is allowed to escape.
 
 One way that a closure can escape is by being stored in a variable that is defined outside the function. As an example, many   functions that start an asynchronous operation take a closure argument as a completion handler. The function returns after     it starts the operation, but the closure isn’t called until the operation is completed—the closure needs to escape, to be .   called later. For example: </p>
-
-<code>
-  var completionHandlers: [() -> Void] = []
-  func someFunctionWithEscapingClosure(completionHandler: @escaping () -> Void) {
-    completionHandlers.append(completionHandler)
-  }
-</code>
+https://pastebin.com/FhjeYQyX
 
 <p> My example of using escaping closure: </p>
-<p><code>
-class FirstClass {
-  private(set) var userName: String?
-  private func getUserName() {
-    NetworkManager.instance.getUserName() { [weak self] userName in
-      guard userName != nil else {
-        // Error
-      }
-      self?.userName = userName
-    }
-    //NetworkManager.instance.getUserName({ [weak self] userName in
-    //  self?.userName = userName
-    //})
-  }
-}
+https://pastebin.com/68rVvLFU
 
-class NetworkManager {
-  static let instance = NetworkManager()
-  private init(){}
-  
-  func getUserName(_ completion: @escaping ((String?) -> Void)) {
-  var name: String?
-  // Some networking in the background thread
-    
-    completion(name)
-  }
-}
-</code></p>
 <h3> @noescape </h3>
 
 <code lang="swift">
