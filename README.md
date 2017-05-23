@@ -1,6 +1,5 @@
 # swiftClosures
 Closures in swift 3 <br>
-by Sh.Nanosem
 
 <h3><b> Introduction </b></h3>
 
@@ -21,12 +20,13 @@ http://fuckingclosuresyntax.com/
 
   One way that a closure can escape is by being stored in a variable that is defined outside the function. As an example, many   functions that start an asynchronous operation take a closure argument as a completion handler. The function returns after     it starts the operation, but the closure isn’t called until the operation is completed—the closure needs to escape, to be .   called later. For example:
 
-  <code lang="swift">
+<span>  <code lang="swift">
     var completionHandlers: [() -> Void] = []
     func someFunctionWithEscapingClosure(completionHandler: @escaping () -> Void) {
       completionHandlers.append(completionHandler)
     }
-  </code>
+  </code> 
+</span>
   
   
   <h3> @noescape <h3>
