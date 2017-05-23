@@ -19,7 +19,7 @@ http://fuckingclosuresyntax.com/
 
 One way that a closure can escape is by being stored in a variable that is defined outside the function. As an example, many   functions that start an asynchronous operation take a closure argument as a completion handler. The function returns after     it starts the operation, but the closure isn’t called until the operation is completed—the closure needs to escape, to be .   called later. For example: </p>
 
-<code lang="swift">
+<code>
   var completionHandlers: [() -> Void] = []
   func someFunctionWithEscapingClosure(completionHandler: @escaping () -> Void) {
     completionHandlers.append(completionHandler)
@@ -27,19 +27,16 @@ One way that a closure can escape is by being stored in a variable that is defin
 </code>
 
 <p> My example of using escaping closure: </p>
-<code lang="swift">
+<code>
 class FirstClass {
   private(set) var userName: String?
-  
   private func getUserName() {
     NetworkManager.instance.getUserName() { [weak self] userName in
       guard userName != nil else { 
         // Error
       }
-      
       self?.userName = userName
     }
-    
     //NetworkManager.instance.getUserName({ [weak self] userName in
     //  self?.userName = userName
     //})
@@ -56,7 +53,6 @@ class NetworkManager {
     
     completion(name)
   }
-
 }
 </code>
 
