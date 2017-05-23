@@ -1,6 +1,5 @@
 # swiftClosures
 <h3><b> Introduction </b></h3>
-</hr>
 
 <h4> What is closures in swift? </h4>
 <p> Closures are self-contained blocks of functionality that can be passed around and used in your code. </p>
@@ -13,7 +12,7 @@
 }
 </code>
 
-</hr>
+<hr>
 
 <h3> Existing types of closures: </h3>
 <h3> @escaping </h3>
@@ -69,7 +68,8 @@ https://pastebin.com/JG4fqrnY
 And one more:
 https://pastebin.com/AEKchATh
 </p>
-</hr>
+
+<hr>
 
 <div>
 <h3> Swift Capture List in Closures </h3>
@@ -84,8 +84,8 @@ When to use unowned and weak self?
 https://pastebin.com/dVCkFEbB
 
 </div>
-</hr>
 
+<hr>
 
 <h5> Referances: <h5>
 <p> Official documentation <br>
