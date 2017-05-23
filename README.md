@@ -26,7 +26,7 @@ One way that a closure can escape is by being stored in a variable that is defin
 https://pastebin.com/FhjeYQyX
 
 <p> My example of using escaping closure: </p>
-https://pastebin.com/68rVvLFU </br>
+https://pastebin.com/mwVScJDV </br>
 
 <b> Marking a closure with @escaping means you have to refer to self explicitly within the closure. </b>
 
@@ -50,3 +50,5 @@ It’s common to call functions that take autoclosures, but it’s not common to
 
 Example:
 http://ericasadun.com/2015/04/30/swift-a-little-autoclosure-hacking/
+
+
