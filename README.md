@@ -33,7 +33,7 @@ Another example of using escaping closure: https://pastebin.com/mwVScJDV
 </p>
 
 <p>
-Marking a closure with @escaping means you have to refer to self explicitly within the closure.
+Marking a closure with @escaping means you have to refer to self explicitly within the closure. </br>
 Goto: "Swift Capture List in Closures"
 
 </p>
