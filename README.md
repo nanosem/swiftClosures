@@ -79,6 +79,9 @@ https://pastebin.com/2Pr5wwyE
 Some examples of usage:
 https://pastebin.com/M1gn7MFi
 
+When to use unowned and weak self?
+https://pastebin.com/dVCkFEbB
+
 </div>
 </hr>
 
