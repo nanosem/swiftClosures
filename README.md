@@ -10,103 +10,25 @@ by Sh.Nanosem
 
 <h2><b> How to declare a Closure in Swift? </b></h2>
 http://fuckingclosuresyntax.com/
+
+<h1><b> Existing types of closures: </b></h1>
+
 <div>
-  <div>
-    <h2>As a <strong>variable</strong>:</h2>
-    <code>
-      <span class='return'>var</span> closureName: (<span class='parameter-types'>ParameterTypes</span>) -&gt; <span class='return'>ReturnType</span>
-    </code>
-  </div>
-  
-  <div>
-    <h2>As an <strong>optional variable</strong>:</h2>
-    <code>
-      <span class='return'>var</span> closureName: ((<span class='parameter-types'>ParameterTypes</span>) -&gt; <span class='return'>ReturnType</span>)?
-    </code>
-  </div>
+  <h3> @escaping </h3>
+  Escaping closure
 
-  <div>
-    <h2>As a <strong>type alias</strong>:</h2>
-    <code>
-        <span class='return'>typealias</span> <span class='closure-type'>ClosureType</span> = (<span class='parameter-types'>ParameterTypes</span>) -&gt; <span class='return'>ReturnType</span>
-    </code>
-  </div>
-  
-  <div>
-    <h2>As a <strong>constant</strong>:</h2>
-    <code>
-      <span class='return'>let</span> closureName: <span class='closure-type'>ClosureType</span> = { ... }
-    </code>
-  </div>
+  A closure is said to escape a function when the closure is passed as an argument to the function, but is called after the     function returns. When you declare a function that takes a closure as one of its parameters, you can write <b>@escaping</b>   before   the parameter’s type to indicate that the closure is allowed to escape.
 
-  <div>
-    <h2>As an <strong>argument to a function call</strong>:</h2>
-    <code>
-      <span class='name'>funcName</span>({ (<span class='parameter-types'>ParameterTypes</span> <span class='return'>ReturnType</span> in statements })
-    </code>
-  </div>
+  One way that a closure can escape is by being stored in a variable that is defined outside the function. As an example, many   functions that start an asynchronous operation take a closure argument as a completion handler. The function returns after     it starts the operation, but the closure isn’t called until the operation is completed—the closure needs to escape, to be .   called later. For example:
 
-  <div>
-    <h2>As a <strong>function parameter</strong>:</h2>
-    <code>
-      <span class='name'>array</span>.<span class='func'>sorted</span>(<span class='func'>by:</span> { (item1: <span class='func'>Int</span>, item2: <span class='func'>Int</span>) -&gt; Bool <span class='return'>in return</span> item1 &lt; item2 })
-    </code>
-  </div>
+  <code lang="swift">
+    var completionHandlers: [() -> Void] = []
+    func someFunctionWithEscapingClosure(completionHandler: @escaping () -> Void) {
+      completionHandlers.append(completionHandler)
+    }
+  </code>
   
-  <div>
-    <h2>As a <strong>function parameter with implied types</strong>:</h2>
-    <code>
-      <span class='name'>array</span>.<span class='func'>sorted</span>(<span class='func'>by:</span> { (item1, item2) -&gt; Bool <span class='return'>in return</span> item1 &lt; item2 })
-    </code>
-  </div>
   
-  <div>
-    <h2>As a <strong>function parameter with implied return type</strong>:</h2>
-    <code>
-      <span class='name'>array</span>.<span class='func'>sorted</span>(<span class='func'>by:</span> { (item1, item2) <span class='return'>in return</span> item1 &lt; item2 })
-    </code>
-  </div>
-  
-  <div>
-    <h2>As the <strong>last function parameter</strong>:</h2>
-    <code>
-      <span class='name'>array</span>.<span class='func'>sorted</span> { (item1, item2) <span class='return'>in return</span> item1 &lt; item2 }
-    </code>
-  </div>
-  
-  <div>
-    <h2>As the last parameter, <strong>using shorthand argument names</strong>:</h2>
-    <code>
-      <span class='name'>array</span>.<span class='func'>sorted</span> { <span class='return'>return</span> $0 &lt; $1 }
-    </code>
-  </div>
-  
-  <div>
-    <h2>As the last parameter, <strong>with an implied return value</strong>:</h2>
-    <code>
-      <span class='name'>array</span>.<span class='func'>sorted</span> { $0 &lt; $1 }
-    </code>
-  </div>
-  
-  <div>
-    <h2>As the last parameter, <strong>as a reference to an existing function</strong>:</h2>
-    <code>
-      <span class='name'>array</span>.<span class='func'>sorted</span>(<span class='func'>by:</span> &lt;)
-    </code>
-  </div>
-  
-  <div>
-    <h2>As a function parameter <strong>with explicit capture semantics</strong>:</h2>
-    <code>
-      <span class='name'>array</span>.<span class='func'>sorted</span>(<span class='func'>by:</span> { [unowned self] (item1: <span class='func'>Int</span>, item2: <span class='func'>Int</span>) -&gt; Bool <span class='return'>in return</span> item1 &lt; item2 })
-    </code>
-  </div>
-  
-  <div>
-    <h2>As a function parameter <strong>with explicit capture semantics and inferred parameters / return type</strong>:</h2>
-    <code>
-      <span class='name'>array</span>.<span class='func'>sorted</span>(<span class='func'>by:</span> { [unowned self] <span class='return'>in return</span> $0 &lt; $1 })
-    </code>
-  </div>
+  <h3> @noescape <h3>
 </div>
 
