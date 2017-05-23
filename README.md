@@ -42,7 +42,8 @@ Goto: "Swift Capture List in Closures"
 
 <img src="https://swiftunboxed.com/images/closure-noescape.png" width="500" height="300"> </br>
 
-<p> https://pastebin.com/JsS74P4L 
+
+<p> Simple example of usage: https://pastebin.com/JsS74P4L 
 
 The lifecycle of a non-escaping closure is simple:
 
