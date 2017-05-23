@@ -27,9 +27,7 @@ One way that a closure can escape is by being stored in a variable that is defin
 </code>
 
 <p> My example of using escaping closure: </p>
-
-<div>
-<code>
+<p><code>
 class FirstClass {
   private(set) var userName: String?
   private func getUserName() {
@@ -56,8 +54,7 @@ class NetworkManager {
     completion(name)
   }
 }
-</code>
-</div>
+</code></p>
 <h3> @noescape </h3>
 
 <code lang="swift">
