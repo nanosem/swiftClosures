@@ -16,7 +16,7 @@
 </hr>
 
 <h3> Existing types of closures: </h3>
-<h4> @escaping </h4>
+<h3> @escaping </h3>
 
 <img src="https://swiftunboxed.com/images/closure-escape.png" width="500" height="300"> </br>
 
@@ -52,7 +52,7 @@ The function runs the closure (or not)
 The function returns
 </p>
 
-<h4>@autoclosure</h4>
+<h3>@autoclosure</h3>
 
 <p>
 An autoclosure is a closure that is automatically created to wrap an expression that’s being passed as an argument to a function. It doesn’t take any arguments, and when it’s called, it returns the value of the expression that’s wrapped inside of it. This syntactic convenience lets you omit braces around a function’s parameter by writing a normal expression instead of an explicit closure.
