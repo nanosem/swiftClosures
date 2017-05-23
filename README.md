@@ -1,5 +1,7 @@
 # swiftClosures
 <h3><b> Introduction </b></h3>
+</hr>
+
 <h4> What is closures in swift? </h4>
 <p> Closures are self-contained blocks of functionality that can be passed around and used in your code. </p>
 
@@ -74,6 +76,9 @@ https://pastebin.com/AEKchATh
 Simple example of using capture list:
 https://pastebin.com/2Pr5wwyE
 
+Some examples of usage:
+https://pastebin.com/M1gn7MFi
+
 </div>
 </hr>
 
@@ -83,4 +88,6 @@ https://pastebin.com/2Pr5wwyE
   https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Closures.html </br>
   <p> Declarations of closure blocs </p>
   http://goshdarnclosuresyntax.com </br>
+  <p> Capture list (Rus) <p>
+  http://swiftbook.ru/doc/automatic-reference-counting/resolving-strong-reference-cycles-for-closures </br>
 </div>
