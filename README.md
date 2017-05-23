@@ -13,8 +13,12 @@
 }
 </code>
 
-<h1><b> Existing types of closures: </b></h1>
+</hr>
+
+<h3> Existing types of closures: </h3>
 <h4> @escaping </h4>
+
+<img src="https://swiftunboxed.com/images/closure-escape.png" width="500" height="300">
 
 <p> 
 A closure is said to escape a function when the closure is passed as an argument to the function, but is called after the    function returns. When you declare a function that takes a closure as one of its parameters, you can write @escaping   before   the parameter’s type to indicate that the closure is allowed to escape. 
@@ -32,6 +36,7 @@ Marking a closure with @escaping means you have to refer to self explicitly with
 
 <h3> @noescape (default closure type in swift 3+)</h3>
 <p> https://pastebin.com/JsS74P4L
+<img src="https://swiftunboxed.com/images/closure-noescape.png" width="500" height="300">
 The lifecycle of a non-escaping closure is simple:
 
 Pass a closure into a function
@@ -50,9 +55,11 @@ It’s common to call functions that take autoclosures, but it’s not common to
 </p>
 
 <p>
-Usage of @autoclosure
+Simple example of usage:
+https://pastebin.com/JG4fqrnY
 </p>
 
+</hr>
 <div>
   <h5> Referances: <h5>
   <p> Official documentation </p>
