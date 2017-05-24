@@ -12,6 +12,10 @@
 }
 </code>
 
+
+https://pastebin.com/SWfSwdLQ
+https://pastebin.com/rBnMQfcL
+
 ##
 
 <h3> Existing types of closures: </h3>
